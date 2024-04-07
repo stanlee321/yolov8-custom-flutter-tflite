@@ -15,14 +15,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static const inModelWidth = 640;
-  static const inModelHeight = 640;
-  static const numClasses = 80;
+  static const inModelWidth = 320;
+  static const inModelHeight = 320;
+  static const numClasses = 5;
 
   static const double maxImageWidgetHeight = 400;
 
   final YoloModel model = YoloModel(
-    'assets/models/yolov8n.tflite',
+    'assets/models/yolov8n_best_float32_20230401.tflite',
     inModelWidth,
     inModelHeight,
     numClasses,

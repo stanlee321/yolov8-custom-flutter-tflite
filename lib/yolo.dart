@@ -38,10 +38,11 @@ class YoloModel {
 
     // output shape:
     // 1 : batch size
-    // 4 + 80: left, top, right, bottom and probabilities for each class
+    // 4 + 80: left, top, right, bottom and probabilities for each class 4 + 5 = 9
     // 8400: num predictions
+    // 1,9,2100
     final output = [
-      List<List<double>>.filled(4 + numClasses, List<double>.filled(8400, 0))
+      List<List<double>>.filled(4 + numClasses, List<double>.filled(2100, 0))
     ];
     int predictionTimeStart = DateTime.now().millisecondsSinceEpoch;
     _interpreter!.run([imgNormalized], output);

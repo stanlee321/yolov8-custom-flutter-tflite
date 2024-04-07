@@ -8,10 +8,10 @@ import 'dart:math';
   List<int> boxesToSave = [];
 
   // Take the argmax to the determine the best classes and scores
-  for (int i = 0; i < 8400; i++) {
+  for (int i = 0; i < 2100; i++) {
     double bestScore = 0;
     int bestCls = -1;
-    for (int j = 4; j < 84; j++) {
+    for (int j = 4; j < 9; j++) {
       double clsScore = rawOutput[j][i];
       if (clsScore > bestScore) {
         bestScore = clsScore;
